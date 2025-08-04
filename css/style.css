@@ -1,0 +1,36 @@
+@import url(reset.css); /* limpeza de estilos aplicada */
+/*comentários no CSS*/
+
+/* estilos gerais*/
+
+/* --- cabeçalho --- */
+header{
+    background-color:rgb(87, 118, 131) ; /*cor para o cabeçalho*/
+    color: rgb(228, 228, 228); /*cor para o texto*/
+    padding: 1rem 0; /*preenchimento xuperior e inferior*/
+    text-align: center;  /*centralixa o texto*/
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.2);/*adiciona sombra*/
+}
+header h1{
+    margin: 0;/*move a margem padrao do h1 mas isso ja foi feito na linha 1*/
+    font-size:  2.5rem;/*tamanho da fonte - 1rem = 16px => 2.5rem = 40px*/
+}
+nav ul{
+    list-style: none; /*ja tem no reset na linha 1*/
+    margin: 1rem 0 0 0;/* afasta 16px do titulo  */
+    display: flex;
+
+}
+nav ul li{
+    margin: 0 1rem ;
+
+}
+nav ul li a{
+    color: whitesmoke;/*cor da fonte*/
+    text-decoration: none ;/*remove  o sublinhado dos links*/ 
+    font-weight: 900;/*peso da fonte pra destaque = colocar negrito*/
+    transition: color 0.3 ease; /*transição suave para o efeito hover*/
+}
+nav ul li a:hover{
+    color: #1abc1a;/*muda a cor do texto ao passar o mouse sobre*/
+}
