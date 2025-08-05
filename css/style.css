@@ -5,13 +5,15 @@
 
 /* --- cabeçalho --- */
 header{
-    background-color:rgb(87, 118, 131) ; /*cor para o cabeçalho*/
-    color: rgb(228, 228, 228); /*cor para o texto*/
+    background-color:rgb(103, 161, 163) ; /*cor para o cabeçalho*/
+    color: rgb(199, 0, 0); /*cor para o texto*/
     padding: 1rem 0; /*preenchimento xuperior e inferior*/
     text-align: center;  /*centralixa o texto*/
     box-shadow: 0 2px 5px rgba(0,0,0, 0.2);/*adiciona sombra*/
+
 }
 header h1{
+    color: #fff;
     margin: 0;/*move a margem padrao do h1 mas isso ja foi feito na linha 1*/
     font-size:  2.5rem;/*tamanho da fonte - 1rem = 16px => 2.5rem = 40px*/
 }
@@ -19,6 +21,8 @@ nav ul{
     list-style: none; /*ja tem no reset na linha 1*/
     margin: 1rem 0 0 0;/* afasta 16px do titulo  */
     display: flex;
+    
+    
 
 }
 nav ul li{
@@ -30,7 +34,114 @@ nav ul li a{
     text-decoration: none ;/*remove  o sublinhado dos links*/ 
     font-weight: 900;/*peso da fonte pra destaque = colocar negrito*/
     transition: color 0.3 ease; /*transição suave para o efeito hover*/
+    
 }
 nav ul li a:hover{
     color: #1abc1a;/*muda a cor do texto ao passar o mouse sobre*/
+}
+/*--- conteudo principal  ---*/
+main{
+    max-width:960px; /*largura maxima para o conteudo principal*/
+    margin: 2rem auto;/*centraliza o conteudo e adiciona margem superior e inferior */
+    padding: 0 20px;  /*preenchimento lateral para nao colar nas bordas*/
+
+}
+/*--- estilos para as seções (sobre mim, projetos e cursos) ---*/
+section{
+    background-color: #fff;/*fundo branco para as seções*/
+    padding: 2.5rem;/*2.5em = 40px - preenchimento*/
+    margin-bottom: 2.5rem;/* espaço entre as seções*/
+    border-radius: 8px;/*cantos arredondados*/
+    box-shadow: 0 4px 10px rgba(47, 103, 159); /*Sombra suave para as seções*/
+}
+
+section h2{
+    color: #0f9bec;/*cor do titulo*/
+    text-align: center; /*centraliza o ocnteudo dentro da seção */
+    margin-bottom: 1.5rem;/*espaço abaixo do titulo da seção */
+    font-size:  2rem;/*tamanho da fonte*/
+}
+    /*seção sobre mim*/
+#sobre figure{
+    text-align: center;/*centraliza a imagem e a legenda*/
+    margin-bottom: 2rem;/*espaço abaixo da figura*/
+}
+
+#sobre img{
+    border-radius: 50%; /*transforma a  imagem em um circulo*/
+    border: 5px solid  #479396;
+    box-shadow:  0 0px 15px rgba(0, 0,0,0,0.2);
+    transform: transform 0.3s ease; /*transição suave para o efeito hover*/
+}
+
+#sobre img:hover{
+    transform: scale(1.05);/*Aumenta em 5%(um pouco) a imagem ao passar o mouse sobre */
+}
+#sobre figcaption{
+    margin-top: 10px;/*espaço entre a imagem e a legenda*/
+    font-style: italic;/*o texto da legenda em italico*/
+    color: #7e0000; /*cor do texto fa legenda*/
+}
+
+
+.projeto-item{
+    border-bottom:  1px solid #eb3838;/*linha divisória entre os projetos*/
+    padding: 1.5rem;/* espaçamento abaixo da linha */
+    margin-bottom:  1,5rem; /*espaçamento abaixo do artigo*/
+}
+.projeto-item:last-child{
+    border-bottom: none;/*remove a linha do ultimo artigo (none = nehum)*/
+    margin-bottom: 0;/*remova a margem do ultimo artigo*/
+}
+#Projetos h4{
+    color: #0f9bec; /* cor do tirulo do projeto */
+    font-size: 1.5rem; /*Tamanho do titulo do projeto*/
+    margin-bottom: 0.8rem;
+}
+.botao-projeto{/*estilo para links "VER PRJETOS"*/
+    display: inline-block; /* permite aplicar padding e margin */
+    background-color: #0f9bec; /*cor de fundo fo botão "ver projetos"*/
+    color: #ffff; /*cor do texto do botão "ver projetos"*/
+    padding: 8px 15px; /*preenchimento interno*/
+    border-radius:  5 px; /*cantos arredondados*/
+    text-decoration: nome;/*remove sublinhado*/
+    margin-top: 1rem; /* Espaço superior*/
+    transition: background-color 0.3s ease;/* transição suave para o hover do botão*/
+}
+.botao-projeto:hover{
+    background-color: #1abc1a;/*escurece o botão ao passar o mouse*/
+}
+
+/*--- seção "cursos & certificações" ---*/
+.lista-cursos{
+    display: grid;/* torna a diuv um formato de grade*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));/*layput responsivo em grade */
+    gap: 20px; /* espaçamento entre os itens da grade */
+}
+.curso-item{
+    background-color: #eeeeee;
+    padding: 1.5;
+    border-radius: 8px ;
+    border: 1px solid #918888;
+    box-shadow: 0 2px 5px rgba(0, 0,0,0,0.05);
+}
+.curso-item h3{
+    color: #1abc1a;
+    margin-top: 0 ;
+    font-size: 1.3rem;
+
+}
+.curso-item time{
+    display: block; /* Garante que a data fique em sua linha */
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10PX;
+}
+/*--- RODA O PÉ ---*/
+footer{
+    background-color: #0f9bec;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
 }
