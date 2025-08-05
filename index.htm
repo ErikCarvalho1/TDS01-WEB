@@ -10,52 +10,72 @@
      <!-- estilização -->
 
       <link rel="stylesheet" href="css/style.css">
-     <!-- CSS Interno (tsg <style>)  -->
+  
     <style>
         
     </style>
       <!-- script -->   
-         <h1 >Portifólifo do Erik</h1>
-        <nav>
-            <ul >
-                <li>Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">contato</a></li>
-
-            </ul>
-        </nav>
-  <body>      
+        
+    
 </header>
-<!-- CSS inline - usado na linha dentro da tag -->
 
-    <header>
+ <body>   
+    <!-- html semântica  -->
+      <!-- Cabeçalho do documento -->
+     <header>
+         <h1 >Portifólifo do Erik</h1>
+           <nav>
+                <ul >
+                    <li>Sobre Mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">contato</a></li>
 
-         <!-- html semântica  -->
+                </ul>
+         </nav>
+         
           <main> 
                 <section id= "sobre">
                    <h2>Sobre Mim</h2>
-                    <figure><img src="images/ErikLindo.jpg" alt="foto de Erik" width= "200">
+                    <figure>
+                        <img src="images/ErikLindo.jpg" alt="foto de Erik" width= "200">
                     <figcaption>Me chamo Erik e gosto de auto tortura  </figcaption>
                     </figure>
-                    
                     <p>Óla! Eu sou um desenvolvedor web apaixonado por criar soluções acessiveis e eficientes. 
                         Tenho experiencia com HTML, CSS e javascript e estou sempre buscando aprender mais</p>
                 </section>
-            
-                    <h3>Meus proejtos</h3>
-                    <article>
-                        <h4> Projeto para a empresa King of kings</h4>
+                <section id="projeto">
+
+                    <h2>Meus proejtos</h2>
+                    <article class="projeto-item">
+                        <h3> Projeto para a empresa King of kings</h3>
                         <p>Desenvolvendo um sistema de genremciamento de loja </p>
-                        <a href="#">Ver Projetos</a>
+                        <a href="#" class="botao-projeto">Ver Projetos</a>
                     </article>
-                    <article>
+
+                    <article class="projeto-item">
                         <h3>Projeto TDSQUEUE</h3>
                         <p>Desenvolvendo um sistema com usu de senhas.. </p>
-                        <a href="#">Ver Projetos</a>
+                        <a href="#" class="botao-projeto">Ver Projetos</a>
                     </article>
                 
                 </section>
-                <section id="curso"></section>
+
+                <section id="curso">
+                    <h2>Meus Cursos</h2>
+                    <div class="lista-curso">
+                        <article class="curso-item">
+                            <h3>Desencolvimento de Sistemas</h3>
+                            <time datetime="2025">2025</time>
+                            <p>curso tecnico para se tornar garoto de programa</p>
+                            <a href="#" class="botao-curso">Ver Curso</a>
+
+                        </article>
+
+                       
+                </div>
+                </section>
+
+
           </main>
 
   <!-- cabeçalho do conteúdo -->
