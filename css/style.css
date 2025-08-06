@@ -13,7 +13,7 @@ body{
     font-family: 'Roboto', 'sans-serif';
     line-height: 1.66; /*espeçamento para linhas para melhor leitura*/
     font-weight: 400;/*fonte regular (200 e 400 boa pratica)*/
-     background-color: #b35858;
+     background-color: #ffffff;
         
     
 }
@@ -22,7 +22,7 @@ body{
 .container{
 max-width: 90%;  /*largura maxima para o conteudo*/
 margin: 0 auto;
-background-color: #8de42b;
+background-color: #ffffff;
 padding: 0 20px;
 }
 
@@ -30,7 +30,6 @@ padding: 0 20px;
 header{
 
     background-color:rgb(4, 84, 235) ; /*cor para o cabeçalho*/
-    color: rgb(167, 129, 129); /*cor para o texto*/
     padding:  14px 0 14px 0 ; /*preenchimento xuperior e inferior*/
     text-align: center;  /*centralixa o texto*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/*adiciona sombra*/
@@ -47,28 +46,32 @@ header h1{
 }
 
 nav ul{
-
+    
     list-style: none; /*ja tem no reset na linha 1*/
     margin: 1rem 0 0 0;/* afasta 16px do titulo  */
     display: flex;
-
 
 }
 
 nav ul li{
     margin: 0 1rem;
     
+    
 }
 
-nav ul li a {
-    color: #FFF;
+header  nav ul li a {
+    color: #f30707;
     text-decoration: none; /* remove o sublinhado padrão da tag "a" */
     font-weight: 500; /* colocar negrito*/
     transition: color 0.3s ease; /* transição suave para o efeito hover*/
+    text-align: center;
+    
+    
 }
 
 nav ul li a:hover{
-    color: #1abc9c; /* muda a cor do texto ao passar o mouse em cima */
+    color: #66605e; /* muda a cor do texto ao passar o mouse em cima */
+    
 }
 
 /* Conteúdo principal */
@@ -80,6 +83,7 @@ main{
 }
 
 nav ul li a{
+    text-align: center;
     color: whitesmoke;/*cor da fonte*/
     text-decoration: none ;/*remove  o sublinhado dos links*/ 
     font-weight: 900;/*peso da fonte pra destaque = colocar negrito*/
@@ -87,7 +91,8 @@ nav ul li a{
     
 }
 nav ul li a:hover{
-    color: #1abc1a;/*muda a cor do texto ao passar o mouse sobre*/
+    color: #7e967e;/*muda a cor do texto ao passar o mouse sobre*/
+    
 }
 /*--- conteudo principal  ---*/
 main{
@@ -103,10 +108,11 @@ main{
     margin-bottom: 2.5rem;/* espaço entre as seções*/
     border-radius: 8px;/*cantos arredondados*/
     box-shadow: 0 4px 10px rgba(47, 103, 159); /*Sombra suave para as seções*/
+    text-align: center;
     
 }
 
-section h2{
+section h3{
     color: #1f8fcf;/*cor do titulo*/
     text-align: center; /*centraliza o ocnteudo dentro da seção */
     margin-bottom: 1.5rem;/*espaço abaixo do titulo da seção */
@@ -115,7 +121,7 @@ section h2{
     /*seção sobre mim*/
 #sobre figure{
     text-align: center;/*centraliza a imagem e a legenda*/
-    margin-bottom: 2rem;/*espaço abaixo da figura*/
+    margin-bottom: 4rem;/*espaço abaixo da figura*/
 }
 
 #sobre img{
@@ -136,19 +142,27 @@ section h2{
 
 
 .projeto-item{
-    border-bottom:  1px solid #eb3838;/*linha divisória entre os projetos*/
-    padding: 1.5rem;/* espaçamento abaixo da linha */
-    margin-bottom:  1,5rem; /*espaçamento abaixo do artigo*/
+   background-color: #eeeeee;
+    padding: 1.5;
+    border-radius: 8px ;
+    border: 1px solid #918888;
+    box-shadow: 0 2px 5px rgba(0, 0,0,0,0.05);
 }
 .projeto-item:last-child{
     border-bottom: none;/*remove a linha do ultimo artigo (none = nehum)*/
     margin-bottom: 0;/*remova a margem do ultimo artigo*/
 }
-#Projetos h4{
+#projetos h3{
     color: #0f9bec; /* cor do tirulo do projeto */
     font-size: 1.5rem; /*Tamanho do titulo do projeto*/
     margin-bottom: 0.8rem;
 }
+#projetos h4{
+    color: #1abc9c;
+    margin-top: 0 ;
+    font-size: 1.3rem;
+}
+
 .botao-projeto{/*estilo para links "VER PRJETOS"*/
     display: inline-block; /* permite aplicar padding e margin */
     background-color: #0f9bec; /*cor de fundo fo botão "ver projetos"*/
@@ -187,6 +201,9 @@ section h2{
     font-size: 0.9rem;
     color: #666;
     margin-top: 10PX;
+}
+.botao-curso:hover{
+     background-color: #1abc1a;/*escurece o botão ao passar o mouse*/
 }
 /*--- RODA O PÉ ---*/
 footer{
