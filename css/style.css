@@ -1,19 +1,48 @@
 @import url(reset.css); /*Limpeza dos estilos do browser aplicada*/
 
+/* --- importa uma fonte simples do Google para nmelhorar a tipografia do nosso proejto--- */
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+/* Habilita a rolagem da*/
+html{
+    scroll-behavior: smooth;
+}
+/* --- estilos gerais ---*/
+    /* --- tipografia global--- */
+
+body{
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 1.66; /*espeçamento para linhas para melhor leitura*/
+    font-weight: 400;/*fonte regular (200 e 400 boa pratica)*/
+     background-color: #b35858;
+        
+    
+}
+
+/* Contrainer para centralizar o conteudo principal  */
+.container{
+max-width: 90%;  /*largura maxima para o conteudo*/
+margin: 0 auto;
+background-color: #8de42b;
+padding: 0 20px;
+}
+
 /* --- Cabeçalho --- */
 header{
 
-    background-color:rgb(103, 161, 163) ; /*cor para o cabeçalho*/
-    color: rgb(199, 0, 0); /*cor para o texto*/
-    padding: 1rem 0; /*preenchimento xuperior e inferior*/
+    background-color:rgb(4, 84, 235) ; /*cor para o cabeçalho*/
+    color: rgb(167, 129, 129); /*cor para o texto*/
+    padding:  14px 0 14px 0 ; /*preenchimento xuperior e inferior*/
     text-align: center;  /*centralixa o texto*/
-    box-shadow: 0 2px 5px rgba(0,0,0, 0.2);/*adiciona sombra*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);/*adiciona sombra*/
+   
 
 }
 header h1{
     color: #fff;
     margin: 0;/*move a margem padrao do h1 mas isso ja foi feito na linha 1*/
     font-size:  2.5rem;/*tamanho da fonte - 1rem = 16px => 2.5rem = 40px*/
+
+ 
 
 }
 
@@ -22,14 +51,13 @@ nav ul{
     list-style: none; /*ja tem no reset na linha 1*/
     margin: 1rem 0 0 0;/* afasta 16px do titulo  */
     display: flex;
-    
-    
 
 
 }
 
 nav ul li{
     margin: 0 1rem;
+    
 }
 
 nav ul li a {
@@ -69,16 +97,17 @@ main{
 
 }
 /*--- estilos para as seções (sobre mim, projetos e cursos) ---*/
-section{
+ section{
     background-color: #fff;/*fundo branco para as seções*/
     padding: 2.5rem;/*2.5em = 40px - preenchimento*/
     margin-bottom: 2.5rem;/* espaço entre as seções*/
     border-radius: 8px;/*cantos arredondados*/
     box-shadow: 0 4px 10px rgba(47, 103, 159); /*Sombra suave para as seções*/
+    
 }
 
 section h2{
-    color: #0f9bec;/*cor do titulo*/
+    color: #1f8fcf;/*cor do titulo*/
     text-align: center; /*centraliza o ocnteudo dentro da seção */
     margin-bottom: 1.5rem;/*espaço abaixo do titulo da seção */
     font-size:  2rem;/*tamanho da fonte*/
@@ -102,7 +131,7 @@ section h2{
 #sobre figcaption{
     margin-top: 10px;/*espaço entre a imagem e a legenda*/
     font-style: italic;/*o texto da legenda em italico*/
-    color: #7e0000; /*cor do texto fa legenda*/
+    color: #a8a2a2; /*cor do texto fa legenda*/
 }
 
 
@@ -278,9 +307,71 @@ section h2{
 
 /* Rodapé */
 footer{
-    background-color: #34495e;
-    color: #fff;
+        background-color: #34495e;
+        color: #fff;
     text-align: center;
     padding: 2rem 0;
+margin-top: 3rem    ;
+}
+footer .container{
+    display: flex;/*permite flexbox para o layout em colunas e linhas*/
+    flex-wrap: wrap;/*permite que os itens quebre linhhas*/
+    justify-content: space-around;/*espaçamento uniforme enrte os itens */
+    align-items: flex-start;/*alinha os items ao topo*/
+    text-align: left/*alinha o trexto a esquerda de cada item do rodape */;
+}
+footer .localizacao, 
+footer .mapa-conteiner{
+    flex-basis:  45%;/*define a largura base para dois item por linha*/
+    max-width: 45%;/*limita a largura maxima*/
+    margin-bottom: 1.5rem; /*define espaçamento inferiror*/
+    box-sizing: border-box;/*inclui padding em uma largura total*/
+}
+footer .localizacao p,
+footer .localizacao address{
+    margin-bottom: 10px;
 
+}
+
+footer #redes-sociais{
+    list-style: none;
+    padding: 0%;
+    margin-top: 15px;
+}
+
+footer #rede-sociais li{
+    margin-bottom: 8px;
+
+}
+footer #rede-sociais a{
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;/* para alinhar o icono e texto*/
+    align-items: center;
+
+}
+footer #redes-sociais a:hover{
+    color: #1abc9c;
+}
+footer #redes-sociais a img{
+    width: 20px ; /*largura da imagem*/
+    height: 20px; /*altura*/
+    margin-right: 8px;
+    border-radius: 8px;
+    vertical-align: middle;
+}
+footer .mapa-conteiner iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 512px 8px rgba(47, 103, 159);
+
+}
+.copyright{
+    margin-top: 2rem ;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.774);
+    font-align: center;
+    width: auto;
 }
